@@ -326,6 +326,7 @@ onUiLoaded(() => {
                     
                     model_path = model_path.replace(/(\.(bin|pt|safetensors|ckpt))(\s+)?([a-z0-9]+)?$/i, "$1");
                     model_path = model_path.replace(/\\/g, '\\\\');
+                    model_path = model_path.replace(/&amp;/g, '&');
 
                     var slashIndex = model_path.indexOf("\\");
                     if (slashIndex !== -1) {
